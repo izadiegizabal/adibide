@@ -1,6 +1,10 @@
+import xyz.izadi.convention.adibide.AdibideBuildType
+
 plugins {
     id("adibide.android.application")
     id("adibide.android.application.compose")
+    id("adibide.android.application.jacoco")
+    id("adibide.android.hilt")
 }
 
 android {
@@ -18,12 +22,20 @@ android {
     }
 
     buildTypes {
-        release {
+        val debug by getting {
+            applicationIdSuffix = AdibideBuildType.DEBUG.applicationIdSuffix
+        }
+
+        val release by getting {
             isMinifyEnabled = true
+            applicationIdSuffix = AdibideBuildType.RELEASE.applicationIdSuffix
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            // TODO: if this is going to be released, remember to properly sign it
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
@@ -32,10 +44,15 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtimeCompose)
     implementation(libs.androidx.activity.compose)

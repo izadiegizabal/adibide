@@ -3,7 +3,7 @@
 minSdk = "24"
 targetSdk = "33"
 compileSdk = "33"
-java = "11"
+java = "17"
 
 ## dependency versions
 # https://mvnrepository.com/artifact/com.android.tools/desugar_jdk_libs
@@ -24,6 +24,10 @@ androidxEspresso = "3.5.1"
 androidxLifecycle = "2.6.1"
 # https://developer.android.com/jetpack/androidx/releases/test
 androidxTestExt = "1.1.5"
+# https://github.com/google/dagger/releases
+dagger = "2.45"
+# https://github.com/jacoco/jacoco/releases
+jacoco = "0.8.8"
 # https://github.com/junit-team/junit4/releases
 junit = "4.13.2"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
@@ -47,6 +51,8 @@ androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "life
 androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 # dependencies of the included build-logic
@@ -57,6 +63,7 @@ ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devto
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
