@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Adibide"
 include(":app")
 include(":core:designsystem")
+include(":core:testing")
