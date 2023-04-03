@@ -38,5 +38,13 @@ gradlePlugin {
             id = "adibide.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "adibide.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "adibide.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
     }
 }

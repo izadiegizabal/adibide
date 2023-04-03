@@ -9,8 +9,7 @@
             @android:color/transparent
         </item>
         <item name="android:windowLightStatusBar">
-            true
+            false
         </item>
     </style>
-
 </resources>

@@ -1,4 +1,4 @@
-package xyz.izadi.adibide.ui.theme
+package xyz.izadi.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -6,4 +6,5 @@ internal object Configurations {
     const val implementation = "implementation"
     const val kapt = "kapt"
     const val kaptAndroidTest = "kaptAndroidTest"
+    const val testImplementation = "testImplementation"
 }
