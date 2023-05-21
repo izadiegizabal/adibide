@@ -7,17 +7,17 @@ java = "17"
 
 ## dependency versions
 # https://mvnrepository.com/artifact/com.android.tools/desugar_jdk_libs
-androidDesugarJdkLibs = "2.0.2"
+androidDesugarJdkLibs = "2.0.3"
 # https://developer.android.com/reference/tools/gradle-api
-androidGradlePlugin = "8.1.0-alpha10"
+androidGradlePlugin = "8.2.0-alpha04"
 # https://developer.android.com/jetpack/androidx/releases/activity
-androidxActivity = "1.7.0"
+androidxActivity = "1.7.1"
 # https://developer.android.com/jetpack/androidx/releases/compose#declaring_dependencies
-androidxComposeBom = "2023.03.00"
+androidxComposeBom = "2023.05.01"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
-androidxComposeCompiler = "1.4.4"
+androidxComposeCompiler = "1.4.7"
 # https://developer.android.com/jetpack/androidx/releases/core
-androidxCore = "1.9.0"
+androidxCore = "1.10.1"
 # https://developer.android.com/jetpack/androidx/releases/test
 androidxEspresso = "3.5.1"
 # https://developer.android.com/jetpack/androidx/releases/lifecycle
@@ -26,15 +26,15 @@ androidxLifecycle = "2.6.1"
 androidxTestCore = "1.5.0"
 androidxTestExt = "1.1.5"
 # https://github.com/google/dagger/releases
-dagger = "2.45"
+dagger = "2.46.1"
 # https://github.com/jacoco/jacoco/releases
-jacoco = "0.8.8"
+jacoco = "0.8.10"
 # https://github.com/junit-team/junit4/releases
 junit = "4.13.2"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
-kotlin = "1.8.10"
+kotlin = "1.8.21"
 # https://github.com/google/ksp/releases
-ksp = "1.8.10-1.0.9"
+ksp = "1.8.21-1.0.11"
 
 [libraries]
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
