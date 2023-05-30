@@ -34,6 +34,10 @@ gradlePlugin {
             id = "adibide.android.application.jacoco"
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
+        register("androidFeature") {
+            id = "adibide.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
         register("androidHilt") {
             id = "adibide.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
@@ -46,5 +50,10 @@ gradlePlugin {
             id = "adibide.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
+        register("androidLibraryJacoco") {
+            id = "adibide.android.library.jacoco"
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
+
     }
 }

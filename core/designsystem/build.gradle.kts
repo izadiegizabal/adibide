@@ -1,6 +1,7 @@
 plugins {
     id("adibide.android.library")
     id("adibide.android.library.compose")
+    id("adibide.android.library.jacoco")
 }
 
 android {

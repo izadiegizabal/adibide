@@ -1,6 +1,6 @@
 [versions]
 ## sdk versions
-minSdk = "24"
+minSdk = "26"
 targetSdk = "33"
 compileSdk = "33"
 java = "17"
@@ -9,9 +9,9 @@ java = "17"
 # https://mvnrepository.com/artifact/com.android.tools/desugar_jdk_libs
 androidDesugarJdkLibs = "2.0.3"
 # https://developer.android.com/reference/tools/gradle-api
-androidGradlePlugin = "8.2.0-alpha04"
+androidGradlePlugin = "8.2.0-alpha05"
 # https://developer.android.com/jetpack/androidx/releases/activity
-androidxActivity = "1.7.1"
+androidxActivity = "1.7.2"
 # https://developer.android.com/jetpack/androidx/releases/compose#declaring_dependencies
 androidxComposeBom = "2023.05.01"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
@@ -31,12 +31,16 @@ androidxTestCore = "1.5.0"
 androidxTestExt = "1.1.5"
 # https://github.com/google/dagger/releases
 dagger = "2.46.1"
+# https://github.com/chihsuanwu/compose-free-scroll/releases
+chihsuanwuComposeFreeScroll = "0.2.1"
 # https://github.com/jacoco/jacoco/releases
 jacoco = "0.8.10"
 # https://github.com/junit-team/junit4/releases
 junit = "4.13.2"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
 kotlin = "1.8.21"
+# https://github.com/Kotlin/kotlinx.coroutines/releases
+kotlinxCoroutines = "1.7.1"
 # https://github.com/google/ksp/releases
 ksp = "1.8.21-1.0.11"
 
@@ -59,10 +63,12 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidxTestCore" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
+chihsuanwu-compose-free-scroll = { group = "com.github.chihsuanwu", name = "compose-free-scroll", version.ref = "chihsuanwuComposeFreeScroll" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "dagger" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 
 # dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }

@@ -11,9 +11,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 rootProject.name = "Adibide"
 include(":app")
 include(":core:designsystem")
 include(":core:testing")
+include(":feature:fibonacci")

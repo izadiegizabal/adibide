@@ -55,6 +55,8 @@ android {
 dependencies {
     implementation(project(":core:designsystem"))
 
+    implementation(project(":feature:fibonacci"))
+
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
