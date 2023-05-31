@@ -14,6 +14,7 @@ import kotlinx.coroutines.launch
 
 class FibonacciUIState(
     val freeScrollState: FreeScrollState,
+    val minimapState: MinimapState,
     private val scope: CoroutineScope
 ) {
     private val isVerticallyScrolled: Boolean
@@ -39,13 +40,20 @@ class FibonacciUIState(
 @Composable
 fun rememberFibonacciUIState(
     freeScrollState: FreeScrollState = rememberFreeScrollState(),
-    scope: CoroutineScope = rememberCoroutineScope()
+    scope: CoroutineScope = rememberCoroutineScope(),
+    minimapState: MinimapState = rememberMinimapState(
+        size = 128.dp,
+        freeScrollState = freeScrollState,
+        scope = scope
+    ),
 ) = remember(
     freeScrollState,
+    minimapState,
     scope
 ) {
     FibonacciUIState(
         freeScrollState = freeScrollState,
+        minimapState = minimapState,
         scope = scope
     )
 }

@@ -9,7 +9,7 @@ java = "17"
 # https://mvnrepository.com/artifact/com.android.tools/desugar_jdk_libs
 androidDesugarJdkLibs = "2.0.3"
 # https://developer.android.com/reference/tools/gradle-api
-androidGradlePlugin = "8.2.0-alpha05"
+androidGradlePlugin = "8.2.0-alpha06"
 # https://developer.android.com/jetpack/androidx/releases/activity
 androidxActivity = "1.7.2"
 # https://developer.android.com/jetpack/androidx/releases/compose#declaring_dependencies

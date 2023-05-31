@@ -1,5 +1,6 @@
 package xyz.izadi.adibide.feature.fibonacci
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -7,8 +8,8 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
-import xyz.izadi.adibide.feature.fibonacci.FibonacciConfig.BOARD_SIZE
-import xyz.izadi.adibide.feature.fibonacci.FibonacciConfig.MIN_SEQUENCE_SIZE
+import xyz.izadi.adibide.feature.fibonacci.FibonacciBoardConfig.BOARD_SIZE
+import xyz.izadi.adibide.feature.fibonacci.FibonacciBoardConfig.MIN_SEQUENCE_SIZE
 
 data class BoardState(
     val board: List<List<Double>> = List(BOARD_SIZE) { List(BOARD_SIZE) { 0.0 } },
@@ -37,7 +38,8 @@ class FibonacciViewModel : ViewModel() {
         }
     }
 
-    private fun processMove(
+    @VisibleForTesting
+    fun processMove(
         board: List<List<Double>>,
         selectedCell: Pair<Int, Int>
     ): Pair<List<List<Double>>, Double> {
@@ -65,9 +67,8 @@ class FibonacciViewModel : ViewModel() {
         for (i in increasedBoard.indices) {
             for (j in 0..increasedBoard[i].size - MIN_SEQUENCE_SIZE) {
                 if (
-                    isFibonacciSublist(
-                        list = increasedBoard[i].subList(j, j + MIN_SEQUENCE_SIZE),
-                        minSize = MIN_SEQUENCE_SIZE
+                    isFibonacciSequence(
+                        increasedBoard[i].subList(j, j + MIN_SEQUENCE_SIZE)
                     )
                 ) {
                     (0 until MIN_SEQUENCE_SIZE).forEach { offset ->
@@ -80,11 +81,10 @@ class FibonacciViewModel : ViewModel() {
         // check for desired consecutive fibonacci numbers in any column
         for (i in 0..increasedBoard.size - MIN_SEQUENCE_SIZE) {
             for (j in increasedBoard[i].indices) {
-                if (isFibonacciSublist(
-                        list = (0 until MIN_SEQUENCE_SIZE).map { offset ->
+                if (isFibonacciSequence(
+                        (0 until MIN_SEQUENCE_SIZE).map { offset ->
                             increasedBoard[i + offset][j]
-                        },
-                        minSize = MIN_SEQUENCE_SIZE
+                        }
                     )
                 ) {
                     (0 until MIN_SEQUENCE_SIZE).forEach { offset ->
