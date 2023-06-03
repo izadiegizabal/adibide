@@ -15,6 +15,8 @@ dependencies {
     api(libs.androidx.compose.ui)
     api(libs.androidx.compose.material3)
 
+    api(libs.chihsuanwu.compose.free.scroll)
+
     debugApi(libs.androidx.compose.ui.tooling)
     debugApi(libs.androidx.compose.ui.tooling.preview)
 }

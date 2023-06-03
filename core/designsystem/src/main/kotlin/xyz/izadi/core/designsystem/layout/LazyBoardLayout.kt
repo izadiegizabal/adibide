@@ -25,6 +25,10 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlin.math.sqrt
 
+/**
+ * attempt to write a custom lazy layout to manage big boards, discarded in favour of
+ * com.github.chihsuanwu.compose-free-scroll due to time constraints
+ * */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyBoardLayout(

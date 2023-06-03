@@ -6,11 +6,13 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import com.chihsuanwu.freescroll.FreeScrollState
 import com.chihsuanwu.freescroll.rememberFreeScrollState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import xyz.izadi.core.designsystem.component.minimap.MinimapState
+import xyz.izadi.core.designsystem.component.minimap.rememberMinimapState
+import xyz.izadi.core.designsystem.theme.Elevation
 
 class FibonacciUIState(
     val freeScrollState: FreeScrollState,
@@ -26,7 +28,7 @@ class FibonacciUIState(
 
     val appBarElevation: Dp
         @Composable get() = animateDpAsState(
-            if (isVerticallyScrolled) 16.dp else 2.dp,
+            if (isVerticallyScrolled) Elevation.ContainerHigh else Elevation.Container,
             label = "appbar tonal elevation"
         ).value
 
@@ -42,7 +44,6 @@ fun rememberFibonacciUIState(
     freeScrollState: FreeScrollState = rememberFreeScrollState(),
     scope: CoroutineScope = rememberCoroutineScope(),
     minimapState: MinimapState = rememberMinimapState(
-        size = 128.dp,
         freeScrollState = freeScrollState,
         scope = scope
     ),
