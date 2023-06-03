@@ -4,9 +4,9 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
-import xyz.izadi.convention.adibide.configureGradleManagedDevices
-import xyz.izadi.convention.adibide.configureKotlinAndroid
-import xyz.izadi.convention.adibide.getInt
+import xyz.izadi.adibide.convention.configureGradleManagedDevices
+import xyz.izadi.adibide.convention.configureKotlinAndroid
+import xyz.izadi.adibide.convention.getInt
 
 class AndroidApplicationConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {

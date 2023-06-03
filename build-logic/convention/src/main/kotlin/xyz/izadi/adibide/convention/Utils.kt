@@ -1,4 +1,4 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 import org.gradle.api.artifacts.VersionConstraint
 import java.util.Optional

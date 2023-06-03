@@ -2,7 +2,7 @@ import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
-import xyz.izadi.convention.adibide.configureJacoco
+import xyz.izadi.adibide.convention.configureJacoco
 
 class AndroidApplicationJacocoConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {

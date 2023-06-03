@@ -1,12 +1,12 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
-import xyz.izadi.convention.adibide.Configurations.androidTestImplementation
-import xyz.izadi.convention.adibide.Configurations.implementation
+import xyz.izadi.adibide.convention.Configurations.androidTestImplementation
+import xyz.izadi.adibide.convention.Configurations.implementation
 
 /**
  * Configure Compose-specific options

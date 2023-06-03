@@ -1,4 +1,4 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 internal object Configurations {
     const val androidTestImplementation = "androidTestImplementation"

@@ -3,9 +3,9 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
-import xyz.izadi.convention.adibide.Configurations.implementation
-import xyz.izadi.convention.adibide.Configurations.kapt
-import xyz.izadi.convention.adibide.Configurations.kaptAndroidTest
+import xyz.izadi.adibide.convention.Configurations.implementation
+import xyz.izadi.adibide.convention.Configurations.kapt
+import xyz.izadi.adibide.convention.Configurations.kaptAndroidTest
 
 class AndroidHiltConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {

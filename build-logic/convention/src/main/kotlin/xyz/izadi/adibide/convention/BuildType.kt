@@ -1,4 +1,4 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 /**
  * This is shared between :app and :benchmarks module to provide configurations type safety.

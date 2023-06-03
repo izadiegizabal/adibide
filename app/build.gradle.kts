@@ -1,4 +1,4 @@
-import xyz.izadi.convention.adibide.AdibideBuildType
+import xyz.izadi.adibide.convention.AdibideBuildType
 
 plugins {
     id("adibide.android.application")

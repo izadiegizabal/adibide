@@ -4,10 +4,10 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.kotlin
-import xyz.izadi.convention.adibide.Configurations.androidTestImplementation
-import xyz.izadi.convention.adibide.Configurations.testImplementation
-import xyz.izadi.convention.adibide.configureGradleManagedDevices
-import xyz.izadi.convention.adibide.configureKotlinAndroid
+import xyz.izadi.adibide.convention.Configurations.androidTestImplementation
+import xyz.izadi.adibide.convention.Configurations.testImplementation
+import xyz.izadi.adibide.convention.configureGradleManagedDevices
+import xyz.izadi.adibide.convention.configureKotlinAndroid
 
 class AndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {

@@ -1,4 +1,4 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 import com.android.build.api.variant.AndroidComponentsExtension
 import org.gradle.api.Project

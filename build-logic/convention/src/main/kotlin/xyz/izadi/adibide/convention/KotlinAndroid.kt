@@ -1,4 +1,4 @@
-package xyz.izadi.convention.adibide
+package xyz.izadi.adibide.convention
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
@@ -9,7 +9,7 @@ import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
-import xyz.izadi.convention.adibide.Configurations.coreLibraryDesugaring
+import xyz.izadi.adibide.convention.Configurations.coreLibraryDesugaring
 
 /**
  * Configure base Kotlin with Android options
@@ -25,6 +25,7 @@ internal fun Project.configureKotlinAndroid(
 
         defaultConfig {
             minSdk = libs.findVersion("minSdk").getInt()
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
         compileOptions {
