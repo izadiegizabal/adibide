@@ -15,7 +15,6 @@ android {
         versionCode = 1
         versionName = "0.0.1" // x.y.z; x = major, y = minor, z = patch level
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -62,6 +61,8 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.lifecycle.runtimeCompose)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.profileinstaller)
 
     androidTestImplementation(project(":core:testing"))
+    baselineProfile(project(":benchmark"))
 }

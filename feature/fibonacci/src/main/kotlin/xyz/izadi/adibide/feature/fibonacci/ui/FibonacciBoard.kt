@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import xyz.izadi.adibide.feature.fibonacci.BoardState
 import xyz.izadi.adibide.feature.fibonacci.FibonacciUIState
-import xyz.izadi.core.designsystem.component.Board
-import xyz.izadi.core.designsystem.component.minimap.Minimap
+import xyz.izadi.core.designsystem.component.board.Board
+import xyz.izadi.core.designsystem.component.board.Minimap
 import xyz.izadi.core.designsystem.theme.Elevation
 
 @Composable

@@ -6,9 +6,6 @@ plugins {
 
 android {
     namespace = "xyz.izadi.adibide.core.designsystem"
-    defaultConfig {
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
 }
 
 dependencies {

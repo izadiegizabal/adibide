@@ -4,6 +4,9 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.kotlin
+import xyz.izadi.adibide.convention.Configurations.androidTestImplementation
+import xyz.izadi.adibide.convention.Configurations.implementation
+import xyz.izadi.adibide.convention.Configurations.testImplementation
 
 class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -16,18 +19,18 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
             dependencies {
-                add("implementation", project(":core:designsystem"))
+                add(implementation, project(":core:designsystem"))
 
-                add("testImplementation", kotlin("test"))
-                add("testImplementation", project(":core:testing"))
-                add("androidTestImplementation", kotlin("test"))
-                add("androidTestImplementation", project(":core:testing"))
+                add(testImplementation, kotlin("test"))
+                add(testImplementation, project(":core:testing"))
+                add(androidTestImplementation, kotlin("test"))
+                add(androidTestImplementation, project(":core:testing"))
 
-                add("implementation", libs.findLibrary("androidx.hilt.navigation.compose").get())
-                add("implementation", libs.findLibrary("androidx.lifecycle.runtimeCompose").get())
-                add("implementation", libs.findLibrary("androidx.lifecycle.viewModelCompose").get())
+                add(implementation, libs.findLibrary("androidx.hilt.navigation.compose").get())
+                add(implementation, libs.findLibrary("androidx.lifecycle.runtimeCompose").get())
+                add(implementation, libs.findLibrary("androidx.lifecycle.viewModelCompose").get())
 
-                add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
+                add(implementation, libs.findLibrary("kotlinx.coroutines.android").get())
             }
         }
     }

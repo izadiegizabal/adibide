@@ -16,6 +16,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Adibide"
 include(":app")
+include(":benchmark")
 include(":core:designsystem")
 include(":core:testing")
 include(":feature:fibonacci")

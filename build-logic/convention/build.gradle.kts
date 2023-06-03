@@ -54,6 +54,9 @@ gradlePlugin {
             id = "adibide.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
-
+        register("androidTest") {
+            id = "adibide.android.test"
+            implementationClass = "AndroidTestConventionPlugin"
+        }
     }
 }

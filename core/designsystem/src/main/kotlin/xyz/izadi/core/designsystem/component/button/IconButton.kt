@@ -15,7 +15,7 @@ fun IconButton(
     onClick: () -> Unit,
     colors: ButtonColors = ButtonDefaults.iconButtonColors(),
     icon: ImageVector,
-    iconContentDescription: String = icon.name
+    iconContentDescription: String
 ) {
     Button(
         modifier = modifier,
@@ -24,6 +24,6 @@ fun IconButton(
         shape = ButtonDefaults.iconButtonShape,
         colors = colors
     ) {
-        Icon(imageVector = Icons.TwoTone.Refresh, contentDescription = iconContentDescription)
+        Icon(imageVector = icon, contentDescription = iconContentDescription)
     }
 }

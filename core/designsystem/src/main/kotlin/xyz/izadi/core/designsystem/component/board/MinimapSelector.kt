@@ -1,4 +1,4 @@
-package xyz.izadi.core.designsystem.component.minimap
+package xyz.izadi.core.designsystem.component.board
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.IntOffset
 
@@ -19,6 +20,8 @@ internal fun MinimapSelector(
     size: DpSize,
     minimapState: MinimapState
 ) {
+    val minimapSelectorTestingTag = "minimapSelector"
+
     Box(
         modifier = Modifier
             .offset { offset }
@@ -41,5 +44,6 @@ internal fun MinimapSelector(
                     }
                 )
             }
+            .testTag(minimapSelectorTestingTag),
     ) {}
 }

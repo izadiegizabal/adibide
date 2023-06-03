@@ -1,4 +1,4 @@
-package xyz.izadi.core.designsystem.component.minimap
+package xyz.izadi.core.designsystem.component.board
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState

@@ -1,4 +1,4 @@
-package xyz.izadi.core.designsystem.component
+package xyz.izadi.core.designsystem.component.board
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -10,11 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.testTag
 import com.chihsuanwu.freescroll.FreeScrollState
 import com.chihsuanwu.freescroll.freeScroll
 import com.chihsuanwu.freescroll.rememberFreeScrollState
-import xyz.izadi.core.designsystem.component.minimap.MinimapState
-import xyz.izadi.core.designsystem.component.minimap.rememberMinimapState
 
 @Composable
 fun Board(
@@ -27,6 +26,8 @@ fun Board(
     minimap: @Composable BoxScope.(MinimapState) -> Unit,
     content: @Composable ColumnScope.() -> Unit
 ) {
+    val boardTestTag = "board"
+
     Box(
         modifier = modifier
             .onGloballyPositioned { coordinates ->
@@ -40,6 +41,7 @@ fun Board(
                 .onGloballyPositioned { coordinates ->
                     minimapState.setBoardSize(coordinates.size)
                 }
+                .testTag(boardTestTag)
         ) {
             content()
         }

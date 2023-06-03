@@ -1,4 +1,4 @@
-package xyz.izadi.core.designsystem.component.minimap
+package xyz.izadi.core.designsystem.component.board
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable

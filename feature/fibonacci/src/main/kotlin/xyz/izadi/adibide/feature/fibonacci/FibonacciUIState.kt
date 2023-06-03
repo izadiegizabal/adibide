@@ -10,8 +10,8 @@ import com.chihsuanwu.freescroll.FreeScrollState
 import com.chihsuanwu.freescroll.rememberFreeScrollState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import xyz.izadi.core.designsystem.component.minimap.MinimapState
-import xyz.izadi.core.designsystem.component.minimap.rememberMinimapState
+import xyz.izadi.core.designsystem.component.board.MinimapState
+import xyz.izadi.core.designsystem.component.board.rememberMinimapState
 import xyz.izadi.core.designsystem.theme.Elevation
 
 class FibonacciUIState(

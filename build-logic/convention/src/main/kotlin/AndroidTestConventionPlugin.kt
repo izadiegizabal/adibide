@@ -1,4 +1,4 @@
-import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.gradle.TestExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -8,16 +8,15 @@ import xyz.izadi.adibide.convention.configureGradleManagedDevices
 import xyz.izadi.adibide.convention.configureKotlinAndroid
 import xyz.izadi.adibide.convention.getInt
 
-class AndroidApplicationConventionPlugin : Plugin<Project> {
+class AndroidTestConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.application")
+                apply("com.android.test")
                 apply("org.jetbrains.kotlin.android")
-                apply("androidx.baselineprofile")
             }
 
-            extensions.configure<ApplicationExtension> {
+            extensions.configure<TestExtension> {
                 configureKotlinAndroid(this)
 
                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
