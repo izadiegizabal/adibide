@@ -1,5 +1,6 @@
 package xyz.izadi.adibide.feature.fibonacci
 
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.material3.Scaffold
@@ -26,8 +27,9 @@ internal fun FibonacciRoute(
 }
 
 @OptIn(ExperimentalLayoutApi::class)
+@VisibleForTesting
 @Composable
-private fun FibonacciScreen(
+fun FibonacciScreen(
     boardState: BoardState,
     fibonacciUIState: FibonacciUIState,
     onCellSelected: (Pair<Int, Int>) -> Unit,

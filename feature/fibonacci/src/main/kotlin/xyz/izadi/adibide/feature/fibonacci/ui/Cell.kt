@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import xyz.izadi.core.designsystem.theme.Elevation
 
@@ -19,10 +20,12 @@ internal fun Cell(
     value: Double,
     onClick: () -> Unit
 ) {
+    val testTag = "cell"
     Surface(
         modifier = Modifier
             .size(48.dp)
-            .padding(2.dp),
+            .padding(2.dp)
+            .testTag(testTag),
         shape = MaterialTheme.shapes.extraSmall,
         onClick = onClick,
         tonalElevation = Elevation.ContainerLowest

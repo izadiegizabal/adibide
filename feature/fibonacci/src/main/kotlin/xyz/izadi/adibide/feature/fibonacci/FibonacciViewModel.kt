@@ -1,6 +1,5 @@
 package xyz.izadi.adibide.feature.fibonacci
 
-import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -38,8 +37,7 @@ class FibonacciViewModel : ViewModel() {
         }
     }
 
-    @VisibleForTesting
-    fun processMove(
+    private fun processMove(
         board: List<List<Double>>,
         selectedCell: Pair<Int, Int>
     ): Pair<List<List<Double>>, Double> {

@@ -14,8 +14,9 @@ fun Minimap(
     state: MinimapState,
     content: @Composable () -> Unit
 ) {
+    val minimapTestTag = "minimap"
     Surface(
-        modifier = modifier.size(state.minimapSize),
+        modifier = modifier.size(state.minimapSize).testTag(minimapTestTag),
         color = MinimapDefaults.containerColor,
         shape = MinimapDefaults.containerShape,
         border = state.border
