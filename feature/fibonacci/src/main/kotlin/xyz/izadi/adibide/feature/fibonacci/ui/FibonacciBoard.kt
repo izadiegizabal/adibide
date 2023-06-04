@@ -5,8 +5,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -15,7 +13,7 @@ import xyz.izadi.adibide.feature.fibonacci.BoardState
 import xyz.izadi.adibide.feature.fibonacci.FibonacciUIState
 import xyz.izadi.core.designsystem.component.board.Board
 import xyz.izadi.core.designsystem.component.board.Minimap
-import xyz.izadi.core.designsystem.theme.Elevation
+import xyz.izadi.core.designsystem.component.board.rememberBoardState
 
 @Composable
 internal fun FibonacciBoard(
@@ -27,9 +25,10 @@ internal fun FibonacciBoard(
 ) {
     Board(
         modifier = modifier.padding(top = padding.calculateTopPadding()),
-        containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(Elevation.Container),
-        freeScrollState = state.freeScrollState,
-        minimapState = state.minimapState,
+        state = rememberBoardState(
+            freeScrollState = state.freeScrollState,
+            minimapState = state.minimapState
+        ),
         minimap = { minimapState ->
             Minimap(
                 modifier = Modifier
