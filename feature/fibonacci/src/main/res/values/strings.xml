@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fibonacci_h_score">Score</string>
+    <string name="fibonacci_btn_cd_restart">restart button icon</string>
+    <string name="fibonacci_h_fibonacci">Fibonacci</string>
+</resources>

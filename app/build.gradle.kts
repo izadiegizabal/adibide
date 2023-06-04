@@ -15,6 +15,8 @@ android {
         versionCode = 1
         versionName = "0.0.1" // x.y.z; x = major, y = minor, z = patch level
 
+        resourceConfigurations += listOf("en", "nl")
+
         vectorDrawables {
             useSupportLibrary = true
         }

@@ -8,7 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import xyz.adibide.feature.fibonacci.R
 import xyz.izadi.core.designsystem.theme.Elevation
 
 @Composable
@@ -26,7 +28,7 @@ fun Score(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Score".uppercase(),
+                text = stringResource(R.string.fibonacci_h_score).uppercase(),
                 style = MaterialTheme.typography.labelSmall
             )
             Text(
